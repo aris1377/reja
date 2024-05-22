@@ -9,7 +9,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
   if (err) {
     console("ERROR:", err);
   } else {
-    user = JSON.parse(data)
+    user = JSON.parse(data);
   }
 });
 //1.kirish kodlari
@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 
 //4.routing code
 
-app.get('/author', (req, res) => {
+app.get("/author", (req, res) => {
   res.render("author", { user: user });
 });
 
