@@ -32,7 +32,6 @@
 // });
 // console.log("passed here 1");
 
-
 //CALLBACK function with setInterval
 // console.log("Jeckma maslaxatlari");
 // const list = [
@@ -65,7 +64,6 @@
 //   }
 // });
 // console.log("passed here 1");
-
 
 //define
 //ASYC function
@@ -108,4 +106,20 @@
 // run();
 //bu bizga variablarni qiymatini olmaguncha keyingisiga otmaslikni belgilab beradi
 
-
+//Task a
+// 2ta paramatrga ega function tuzamiz
+// parametr-2 ni ichida parametr-1 nechta ekanligini sanash uchun
+// for ichiga 0 dan boshlanadigan let variable ochamiz
+// 0 dan paramentr-2 stringini uzunligigacha aylantiramiz
+// let number uchamiz(sanash uchun)
+// if ni ichida parametr-2 ni keyini parametr-1 ga tenglshtirib bir xillarini number sanab ketadi
+const count_letter = (letter, string) => {
+  let number = 0;
+  for (let start = 0; start < string.length; start++) {
+    if (string[start] === letter) {
+      number++;
+    }
+  }
+  return number;
+};
+console.log(count_letter("e", "engineer"));
