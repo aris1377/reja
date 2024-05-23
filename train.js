@@ -1,3 +1,41 @@
+// //Task a
+// // 2ta paramatrga ega function tuzamiz
+// // parametr-2 ni ichida parametr-1 nechta ekanligini sanash uchun
+// // for ichiga 0 dan boshlanadigan let variable ochamiz
+// // 0 dan paramentr-2 stringini uzunligigacha aylantiramiz
+// // let number uchamiz(sanash uchun)
+// // if ni ichida parametr-2 ni keyini parametr-1 ga tenglshtirib bir xillarini number sanab ketadi
+// const count_letter = (letter, string) => {
+//   let number = 0;
+//   for (let start = 0; start < string.length; start++) {
+//     if (string[start] === letter) {
+//       number++;
+//     }
+//   }
+//   return number;
+// };
+// console.log(count_letter("e", "engineer"));
+
+//Task B
+//1 ta str_Num parametr qabul qiladigan countDigits function ochamiz
+//let start=0 dan boshlanadigan variable ochamiz
+//startdan boshalb str_Num ni oxirigacha forda aylantiramiz
+//bizga raqamlarni sanab borish uchun box quti ochib olamiz
+//va forda aylanib 9 dan kichik kelgan raqamlarni usha qutida yigamiz
+function countDigits(str_Num) {
+  let box = 0;
+  for (let start = 0; start <= str_Num.length; start++){
+    if (str_Num[start] <= 9) {
+      box++;
+    }
+  }
+  return box;
+};
+console.log(countDigits("ad2a54y79wet0sfgb9"));
+
+
+
+
 //CALLBACK function with setTimeout
 
 // console.log("Jeckma maslaxatlari");
@@ -106,20 +144,4 @@
 // run();
 //bu bizga variablarni qiymatini olmaguncha keyingisiga otmaslikni belgilab beradi
 
-//Task a
-// 2ta paramatrga ega function tuzamiz
-// parametr-2 ni ichida parametr-1 nechta ekanligini sanash uchun
-// for ichiga 0 dan boshlanadigan let variable ochamiz
-// 0 dan paramentr-2 stringini uzunligigacha aylantiramiz
-// let number uchamiz(sanash uchun)
-// if ni ichida parametr-2 ni keyini parametr-1 ga tenglshtirib bir xillarini number sanab ketadi
-const count_letter = (letter, string) => {
-  let number = 0;
-  for (let start = 0; start < string.length; start++) {
-    if (string[start] === letter) {
-      number++;
-    }
-  }
-  return number;
-};
-console.log(count_letter("e", "engineer"));
+
