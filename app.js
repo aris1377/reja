@@ -27,7 +27,7 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4.routing code
-
+//comment
 app.get("/author", (req, res) => {
   res.render("author", { user: user });
 });
