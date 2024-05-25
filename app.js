@@ -6,15 +6,8 @@ const app = express();
 
 // mongoDB connect
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
-// let user;
-// fs.readFile("database/user.json", "utf8", (err, data) => {
-//   if (err) {
-//     console("ERROR:", err);
-//   } else {
-//     user = JSON.parse(data);
-//   }
-// });
 //1.kirish kodlari
 app.use(express.static("public"));
 app.use(express.json());
@@ -39,6 +32,16 @@ app.post("/create-item", (req, res) => {
     console.log(data.ops);
     res.json(data.ops[0]);
   });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
 });
 
 app.get("/", function (req, res) {
