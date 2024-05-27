@@ -1,3 +1,12 @@
+// u 2ta string parametr ega bolsin, 
+//hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true
+
+function checkContent(a, b) {
+  return a.split("").sort().join("") === b.split("").sort().join("");
+}
+console.log(checkContent("mitgroup", "gmtiprou"));
+
 //TASK-C
 // Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
 // Hamda classning quyidagdek 3'ta metodi bo'lsin:
@@ -16,50 +25,50 @@
 // shop.sotish("non", 3); & shop.qabul("cola", 4); & shop.qoldiq();
 // Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud!
 
-const moment = require("moment");
-class Shop {
-  //state
-  non;
-  lagmon;
-  cola;
-  //constructor
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
-  timeUpdate() {
-    return moment().format("HH:mm");
-  }
-  //method
-  qoldiq() {
-    const time = this.timeUpdate();
-    console.log(`hozir ${time}`);
-    console.log(
-      `${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola`
-    );
-  }
-  qabul(box, amount) {
-    const time = this.timeUpdate();
-    console.log(`hozir ${time}`);
-    this[box] += amount;
-    console.log(
-      `${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola`
-    );
-  }
-  sotish(box, amount) {
-    const time = this.timeUpdate();
-    console.log(`hozir ${time}`);
-    this[box] -= amount;
-    console.log(
-      `${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola`
-    );
-  }
-}
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
+// const moment = require("moment");
+// class Shop {
+//   //state
+//   non;
+//   lagmon;
+//   cola;
+//   //constructor
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
+//   timeUpdate() {
+//     return moment().format("HH:mm");
+//   }
+//   //method
+//   qoldiq() {
+//     const time = this.timeUpdate();
+//     console.log(`hozir ${time}`);
+//     console.log(
+//       `${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola`
+//     );
+//   }
+//   qabul(box, amount) {
+//     const time = this.timeUpdate();
+//     console.log(`hozir ${time}`);
+//     this[box] += amount;
+//     console.log(
+//       `${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola`
+//     );
+//   }
+//   sotish(box, amount) {
+//     const time = this.timeUpdate();
+//     console.log(`hozir ${time}`);
+//     this[box] -= amount;
+//     console.log(
+//       `${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola`
+//     );
+//   }
+// }
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+// shop.sotish("non", 3);
+// shop.qabul("cola", 4);
 
 //Task B
 //1 ta str_Num parametr qabul qiladigan countDigits function ochamiz

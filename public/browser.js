@@ -7,7 +7,7 @@ function itemTemplat(item) {
           <div>
             <button
               data-id="${item._id}"
-              class="edit-me btn btn -secondary btn-sm mr-1"
+              class="edit-me btn btn-secondary btn-sm mr-1"
             >
               Ozgartirish
             </button>
@@ -60,6 +60,38 @@ document.addEventListener("click", function (e) {
 
   //edit oper
   if (e.target.classList.contains("edit-me")) {
-    alert("siz edit tugmasini bosdingiz");
+    let userInput = prompt(
+      "O'zgartirishni kiriting",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("iltimos qaytadan harakat qiling!", err);
+        });
+    }
   }
+});
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios
+    .post("/delete-all", { delete_all: true })
+    .then((response) => {
+      alert(response.data.state);
+      // Remove all items from the DOM
+      document.querySelectorAll(".list-group-item").forEach((item) => {
+        item.remove();
+      });
+    })
+    .catch((err) => {
+      console.log("Iltimos qaytadan harakat qiling");
+    });
 });
