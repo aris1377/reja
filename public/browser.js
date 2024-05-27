@@ -92,6 +92,6 @@ document.getElementById("clean-all").addEventListener("click", function () {
       });
     })
     .catch((err) => {
-      console.log("Iltimos qaytadan harakat qiling");
+      console.log("Iltimos qaytadan harakat qiling!");
     });
 });
