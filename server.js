@@ -36,7 +36,7 @@ mongodb.connect(
       //-7-http ni <createServer> degan metodini chaqiryapmiz va <app> ni argumnet sifatida pass qilyapmiz
       // natija bizga serverni beradi (bu documention dan olingan)
       const server = http.createServer(app); //server ham object
-      let PORT = 3000;
+      let PORT = 3051;
       //-8- serverga <listen> qil degan metoodi orqali buyuruq beryapmiz
       //<listen> ichida 2 ta orgemnt bor. Bu callback. 1.PORT 2.Function
       // 3000 chi portni eshitib deb majburlayapmiz
