@@ -1,11 +1,24 @@
+// E-TASK:
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function checkContent(str) {
+  return str.split("").reverse().join("");
+}
+console.log(checkContent("hello"));
+
+
+//TASK-D
+
 // u 2ta string parametr ega bolsin, 
 //hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true
 
-function checkContent(a, b) {
-  return a.split("").sort().join("") === b.split("").sort().join("");
-}
-console.log(checkContent("mitgroup", "gmtiprou"));
+// function checkContent(a, b) {
+//   return a.split("").sort().join("") === b.split("").sort().join("");
+// }
+// console.log(checkContent("mitgroup", "gmtiprou"));
 
 //TASK-C
 // Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
