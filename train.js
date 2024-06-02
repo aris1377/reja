@@ -1,17 +1,48 @@
+// MIT 14 TASK F
+// Yagona string argumentga ega findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
+// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+function findDoublers(str) {
+  let str_spilt = str.split("");
+  for (let i = 0; i <= str.length; i++) {
+    for (let j = i + 1; j <= str.length; j++) {
+      if (str_spilt[i] === str_spilt[j]) {
+        return true;
+      } else {
+      }
+    }
+  }
+  return false;
+}
+console.log(findDoublers("hello"));
+console.log(findDoublers("helo"));
+
 // E-TASK:
 
 // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 // MASALAN: getReverse("hello") return qilsin "olleh"
 
-function checkContent(str) {
-  return str.split("").reverse().join("");
-}
-console.log(checkContent("hello"));
+// function checkContent(str) {
+//   return str.split("").reverse().join("");
+// }
+// console.log(checkContent("hello"));
 
+// function checkContent(str) {
+//   let new_str = "";
+//   for (let i = str.length-1; i >= 0; i--) {
+//     new_str += str[i];
+//   }
+//   return new_str;
+// }
+// const result = checkContent("hello");
+// console.log("result:", result);
 
 //TASK-D
 
-// u 2ta string parametr ega bolsin, 
+// u 2ta string parametr ega bolsin,
 //hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true
 
